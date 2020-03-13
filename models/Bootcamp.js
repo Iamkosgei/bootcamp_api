@@ -100,7 +100,7 @@ const BootcampSchema = new mongoose.Schema({
   }
 });
 
-//creaet bootcamp slug from name
+//create bootcamp slug from name
 BootcampSchema.pre('save', function(next) {
   this.slug = slugify(this.name, {
     lower: true
